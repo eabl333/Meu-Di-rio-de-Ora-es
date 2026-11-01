@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meu Diário de Orações · Voz do Altíssimo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><button class="brand" data-go="inicio">Meu Diário de Orações<small>Voz do Altíssimo</small></button>
+<button class="burger" id="burger" aria-label="Abrir menu">Menu</button>
+<nav id="nav"><button data-go="painel">Painel</button><button data-go="oracao">Nova oração</button><button data-go="pedido">Pedidos</button><button data-go="gratidao">Gratidões</button><button data-go="resposta">Respostas</button><button data-go="calendario">Calendário</button><button data-go="reflexao">Reflexões</button><button data-go="palavra">Palavra do dia</button><button data-go="backup">Backup</button></nav></header>
+<main>
+<section id="inicio" class="view hero"><div><h1>Meu Diário de Orações</h1><p class="lead">Um espaço especial para conversar com Deus, registrar seus pedidos, agradecer pelas bênçãos e guardar suas experiências de fé.</p>
+<div class="row"><button class="btn" data-go="oracao">Começar meu diário</button><button class="btn ghost" data-go="painel">Ver minhas anotações</button></div>
+<blockquote>Não importa o tamanho da sua oração. Deus conhece o seu coração.</blockquote></div><img src="hero.svg" alt="Diário aberto com caneta e flores"></section>
+<section id="painel" class="view"><h2>Painel</h2><div class="stats" id="stats"></div><div class="grid2"><div class="card"><h3>Última anotação</h3><div id="last"></div><button class="btn" data-go="oracao">Nova anotação</button></div><div class="card"><h3>Calendário de registros</h3><div id="miniCal"></div></div></div></section>
+<section id="oracao" class="view"></section><section id="pedido" class="view"></section><section id="gratidao" class="view"></section><section id="resposta" class="view"></section><section id="reflexao" class="view"></section>
+<section id="calendario" class="view"><h2>Calendário espiritual</h2><div class="card"><div class="calhead"><button class="btn ghost" id="prev">‹</button><strong id="calTitle"></strong><button class="btn ghost" id="next">›</button></div><div class="cal" id="cal"></div></div><div id="dayList"></div></section>
+<section id="palavra" class="view"><h2>Palavra do dia</h2><div id="verses"></div><p class="hint">Texto: Almeida Revista e Corrigida (domínio público). Confira a redação em sua Bíblia de preferência.</p></section>
+<section id="backup" class="view"><h2>Backup e privacidade</h2><div class="card"><p>Seus registros ficam salvos <b>neste aparelho e navegador</b>. Eles não são enviados a nenhum servidor nem sincronizados entre aparelhos.</p><p>O armazenamento do navegador <b>não é criptografado nem protegido por senha</b>. Evite usar dispositivos compartilhados para anotações privadas. Limpar os dados do navegador apaga o diário: faça backups com frequência.</p>
+<div class="row"><button class="btn" id="exp">Exportar backup (JSON)</button><label class="btn ghost">Importar backup<input type="file" id="imp" accept=".json,application/json" hidden></label><button class="btn ghost" id="prt">Imprimir / salvar em PDF</button></div></div></section>
+</main>
+<footer><strong>VOZ DO ALTÍSSIMO</strong><p>Uma palavra de fé para transformar seus dias.</p><p><a href="#" id="l1">Site principal</a> · <a href="#" id="l2">TikTok</a> · <a href="#" id="l3">Instagram</a> · <a href="#" id="l4">Contato</a></p></footer>
+<div id="welcome" class="modal" hidden><div class="card"><h2>Bem-vindo ao seu Diário de Orações!</h2><p>Este é o seu espaço para escrever com liberdade, registrar seus sentimentos e guardar suas experiências de fé.</p><p class="hint">Seus registros ficam apenas neste navegador.</p><button class="btn" id="start">Começar agora</button></div></div>
+<div id="toast" role="status" aria-live="polite"></div><div id="printArea"></div>
+<script src="script.js"></script></body></html>
